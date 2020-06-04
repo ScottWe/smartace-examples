@@ -127,31 +127,31 @@ void run_model(void) {
     (next_call) = (nd_range(0, 5, "next_call"));
     switch (next_call) {
     case 0: {
-      smartace_log("Calling openFund() on contract_0]");
+      smartace_log("[Calling openFund() on contract_0]");
       Manager_Method_openFund(&(contract_0), sender, value, blocknum, timestamp, paid, origin);
       smartace_log("[Call successful]");
       break;
     }
     case 1: {
-      smartace_log("Calling claim() on contract_1]");
+      smartace_log("[Calling claim() on contract_1]");
       Fund_Method_claim(contract_1, sender, value, blocknum, timestamp, paid, origin);
       smartace_log("[Call successful]");
       break;
     }
     case 2: {
-      smartace_log("Calling open() on contract_1]");
+      smartace_log("[Calling open() on contract_1]");
       Fund_Method_open(contract_1, sender, value, blocknum, timestamp, paid, origin);
       smartace_log("[Call successful]");
       break;
     }
     case 3: {
-      smartace_log("Calling close() on contract_1]");
+      smartace_log("[Calling close() on contract_1]");
       Fund_Method_close(contract_1, sender, value, blocknum, timestamp, paid, origin);
       smartace_log("[Call successful]");
       break;
     }
     case 4: {
-      smartace_log("Calling deposit() on contract_1]");
+      smartace_log("[Calling deposit() on contract_1]");
       ((value).v) = (nd_uint256_t("value"));
       Fund_Method_deposit(contract_1, sender, value, blocknum, timestamp, paid, origin);
       smartace_log("[Call successful]");

@@ -97,7 +97,7 @@ void run_model(void) {
     (next_call) = (nd_range(0, 4, "next_call"));
     switch (next_call) {
     case 0: {
-      smartace_log("Calling invest() on contract_0]");
+      smartace_log("[Calling invest() on contract_0]");
       ((value).v) = (nd_uint256_t("value"));
       Crowdsale_Method_invest(&(contract_0), sender, value, blocknum, timestamp,
                               paid, origin);
@@ -105,21 +105,21 @@ void run_model(void) {
       break;
     }
     case 1: {
-      smartace_log("Calling finish() on contract_0]");
+      smartace_log("[Calling finish() on contract_0]");
       Crowdsale_Method_finish(&(contract_0), sender, value, blocknum, timestamp,
                               paid, origin);
       smartace_log("[Call successful]");
       break;
     }
     case 2: {
-      smartace_log("Calling cancel() on contract_0]");
+      smartace_log("[Calling cancel() on contract_0]");
       Crowdsale_Method_cancel(&(contract_0), sender, value, blocknum, timestamp,
                               paid, origin);
       smartace_log("[Call successful]");
       break;
     }
     case 3: {
-      smartace_log("Calling repOK() on contract_0]");
+      smartace_log("[Calling repOK() on contract_0]");
       Crowdsale_Method_repOK(&(contract_0), sender, value, blocknum, timestamp,
                              paid, origin);
       smartace_log("[Call successful]");
