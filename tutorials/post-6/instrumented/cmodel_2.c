@@ -262,12 +262,12 @@ void run_model(void) {
     Write_Map_1(&contract_1->user_bids, Init_sol_address_t(5),
                 Init_sol_uint256_t(nd_uint256_t("bids[5]")));
     sol_require(invariant(&contract_0), "Bad arrangement.");
-    sol_assert(property(&contract_0, Init_sol_address_t(0)), "Violation of Prop(0).");
-    sol_assert(property(&contract_0, Init_sol_address_t(1)), "Violation of Prop(1).");
-    sol_assert(property(&contract_0, Init_sol_address_t(2)), "Violation of Prop(2).");
-    sol_assert(property(&contract_0, Init_sol_address_t(3)), "Violation of Prop(3).");
-    sol_assert(property(&contract_0, Init_sol_address_t(4)), "Violation of Prop(4).");
-    sol_assert(property(&contract_0, Init_sol_address_t(5)), "Violation of Prop(5).");
+    sol_assert(property(&contract_0, Init_sol_address_t(0)), "Address 0 violates Prop.");
+    sol_assert(property(&contract_0, Init_sol_address_t(1)), "Address 1 violates Prop.");
+    sol_assert(property(&contract_0, Init_sol_address_t(2)), "Address 2 violates Prop.");
+    sol_assert(property(&contract_0, Init_sol_address_t(3)), "Address 3 violates Prop.");
+    sol_assert(property(&contract_0, Init_sol_address_t(4)), "Address 4 violates Prop.");
+    sol_assert(property(&contract_0, Init_sol_address_t(5)), "Address 5 violates Prop.");
     // [ END ] INSTRUMENTATION
     sol_on_transaction();
     ((sender).v) = (nd_range(3, 6, "sender"));
