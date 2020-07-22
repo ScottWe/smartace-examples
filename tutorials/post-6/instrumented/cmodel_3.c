@@ -346,13 +346,13 @@ void run_model(void) {
     }
     // [START] INSTRUMENTATION
     sol_assert(invariant(&contract_0), "Local Inductiveness is violated.");
-    if (nd_range(0, 2, "Use external address(3)")) {
+    if (!nd_range(0, 2, "Share address(3)")) {
       Write_Map_1(&contract_1->user_bids, Init_sol_address_t(3), extern_3);
     }
-    if (nd_range(0, 2, "Use external address(4)")) {
+    if (!nd_range(0, 2, "Share address(4)")) {
       Write_Map_1(&contract_1->user_bids, Init_sol_address_t(4), extern_4);
     }
-    if (nd_range(0, 2, "Use external address(5)")) {
+    if (!nd_range(0, 2, "Share address(5)")) {
       Write_Map_1(&contract_1->user_bids, Init_sol_address_t(5), extern_5);
     }
     sol_assert(invariant(&contract_0), "Non-interference is violated.");
